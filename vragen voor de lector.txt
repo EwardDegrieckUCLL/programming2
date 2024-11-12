@@ -1,1 +1,9 @@
 Reminder: deze .txt file staat in een git repository!
+
+------------------------
+als je twee verschillende functies hebt in een class:
+1. bepaald alle tasks die niet finished zijn
+2. bepaald alle tasks die niet finished zijn en waarvan due date in het verleden
+
+-> mag je dan voor de tweede functie de eerste er in gebruiken? of maak je dat de tweede onafhankelijk is van de eerste en dus zelf nog eens checkt voor 'niet finished'?
+------------------------
