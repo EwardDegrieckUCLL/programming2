@@ -1,6 +1,8 @@
 def target_sum(ns, target):
-    for i in range(len(ns)):
-        for j in range(len(ns)):
-            if ns[i] + ns[j] == target:
-                return True
-    return False
+    return any(
+        x + y == target
+        for x in ns
+        for y in ns
+    )
+
+# remade exercise after learning about comprehensions

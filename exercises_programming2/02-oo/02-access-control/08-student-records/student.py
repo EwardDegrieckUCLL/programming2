@@ -3,7 +3,8 @@ class Student:
         self.name = name
         self.__courses = {}
 
-    def calculate_letter_grade(self, score):
+    @staticmethod
+    def calculate_letter_grade(score):
         if score >= 90:
             return 'A'
         elif score >= 80:
@@ -16,7 +17,7 @@ class Student:
             return 'F'
 
     def add_course(self, course_name, score):
-        score_letter = self.calculate_letter_grade(score)
+        score_letter = Student.calculate_letter_grade(score)
         self.__courses[course_name] = score_letter
 
     def get_courses(self):

@@ -3,7 +3,7 @@ class Student:
         self.name = name
         self.__courses = {}
 
-    def calculate_letter_grade(self, score):
+    def calculate_letter_grade(score):
         if score >= 90:
             return "A"
         elif score >= 80:

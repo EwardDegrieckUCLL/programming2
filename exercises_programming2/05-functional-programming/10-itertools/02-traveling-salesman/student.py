@@ -7,4 +7,4 @@ def find_shortest_path(distance, city_count):
     all_permutations = permutations(range(1, city_count))
     all_possible_paths = ([0] + list(permutation) + [0] for permutation in all_permutations)
 
-    return min(all_possible_paths, key= lambda path: get_total_distance(path))
+    return min(all_possible_paths, key= get_total_distance)

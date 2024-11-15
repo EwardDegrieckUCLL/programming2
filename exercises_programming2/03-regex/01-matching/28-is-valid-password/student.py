@@ -1,25 +1,25 @@
 import re
 
 def is_valid_password(string):
-    pos_regex = [
-        r'.{12,}',
-        r'[0-9]',
+    
+    valid = [
+        r'\d',
         r'[a-z]',
         r'[A-Z]',
-        r'[-+/.*@]',
+        r'[-+*/.@]'
     ]
 
-    neg_regex= [
+    invalid = [
         r'(.)\1{2}',
         r'(.)(.*\1){3}'
     ]
 
-    for regex in pos_regex:
+    for regex in valid:
         if not re.search(regex, string):
             return False
         
-    for regex in neg_regex:
+    for regex in invalid:
         if re.search(regex, string):
             return False
-        
-    return True
+
+    return len(string) >= 12

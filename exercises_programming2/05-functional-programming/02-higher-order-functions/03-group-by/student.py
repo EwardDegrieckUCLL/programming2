@@ -1,6 +1,6 @@
 def group_by(xs, key_function):
     return {
-        key : [x for x in xs if key_function(x) == key]
+        key : [x for x in xs if key == key_function(x)]
         for key in {key_function(x) for x in xs}
     }
 
